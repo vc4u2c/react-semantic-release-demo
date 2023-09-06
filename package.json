@@ -1,16 +1,18 @@
 {
   "name": "react-semantic-release-demo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "branches": ["main"],
+  "branches": [
+    "main"
+  ],
   "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/github",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ],  
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
   "release": {
     "prepare": [
       "@semantic-release/changelog",
@@ -25,7 +27,7 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
-  },    
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
