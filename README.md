@@ -76,3 +76,4 @@ npm run eject
 ## Notes
 - https://github.com/codfish/semantic-release-action#basic-usage
 - https://github.com/semantic-release/semantic-release
+- https://semaphoreci.com/blog/automate-react-native-release
