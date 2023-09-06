@@ -1,6 +1,6 @@
 # React Semantic Release Demo
 
-https://dev.to/amalv/how-to-setup-semantic-release-for-a-react-app-or-a-next-js-app-25c1
+Semantic Release on React App
 
 ## Installation
 
@@ -23,6 +23,7 @@ npm install --save-dev @semantic-release/git @semantic-release/changelog
 
 ```json
   "private": true,
+  "branches": ["main"],  
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -71,3 +72,7 @@ npm run eject
 # React Semantic Release demo
 
 ```
+
+## Notes
+- https://github.com/codfish/semantic-release-action#basic-usage
+- https://github.com/semantic-release/semantic-release
