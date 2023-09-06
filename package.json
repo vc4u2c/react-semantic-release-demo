@@ -2,6 +2,7 @@
   "name": "react-semantic-release-demo",
   "version": "0.1.0",
   "private": true,
+  "branches": ["main"],
   "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
