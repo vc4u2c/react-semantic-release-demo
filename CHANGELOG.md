@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/vc4u2c/react-semantic-release-demo/compare/v1.0.0...v1.1.0) (2023-09-06)
+
+
+### Features
+
+* Change Welcome Text ([17a27b3](https://github.com/vc4u2c/react-semantic-release-demo/commit/17a27b32560673bb0e6b52dadc2a8ab0e79cc6b1))
+
 # 1.0.0 (2023-09-06)
 
 
