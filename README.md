@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# React Semantic Release Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://dev.to/amalv/how-to-setup-semantic-release-for-a-react-app-or-a-next-js-app-25c1
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+```bash
+cd C:\Users\Vinod Chandran\Documents\Source\Repos\React\
+npx create-react-app react-semantic-release-demo --template typescript --use-npm
+cd react-semantic-release-demo
+# Delete .git folder
+git init -b main
+git add .
+git commit -m 'feat(app): Initial Create'
+# In VS Code under Git extensions click on Publish Branch
+# Ensure branch is published to GitHub
 
-### `npm start`
+# Install Semantic Release Git and Changelog plugins
+npm install --save-dev @semantic-release/git @semantic-release/changelog
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Add Semantic Release config to package.json
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```json
+  "private": true,
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
+  "release": {
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  }
+```
 
-### `npm test`
+### Commiting Code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git add .
+git commit -m "feat: Add Semantic Release and Github Actions"
+git push
+```
 
-### `npm run build`
+### Running locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Start the development server
+npm start
+# Bundles the app into static files for production.
+npm run build
+# Starts the test runner.
+npm test
+# Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
+npm run eject
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# React Semantic Release demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
