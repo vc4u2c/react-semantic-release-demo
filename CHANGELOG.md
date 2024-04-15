@@ -1,3 +1,10 @@
+# 1.0.0 (2024-04-15)
+
+
+### Features
+
+* **Initial Create:** Initial Create ([cee4395](https://github.com/vc4u2c/react-semantic-release-demo/commit/cee4395c376ed159c33eb2ff8008ff2e0b3748f9))
+
 # [1.1.0](https://github.com/vc4u2c/react-semantic-release-demo/compare/v1.0.0...v1.1.0) (2024-04-15)
 
 
