@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/vc4u2c/react-semantic-release-demo/compare/v1.0.0...v1.0.1) (2024-04-15)
+
+
+### Bug Fixes
+
+* **Greeting:** Minor Greeting change ([895f59b](https://github.com/vc4u2c/react-semantic-release-demo/commit/895f59b76c05e5189f0b30c94bfc2d3053d7db01))
+
 # 1.0.0 (2024-04-15)
 
 
